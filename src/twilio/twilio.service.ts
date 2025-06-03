@@ -20,7 +20,7 @@ export class TwilioService {
     const message = await this.client.messages.create({
       body,
       to: `${to}`, // <- prefixo whatsapp
-      from: '+', // <- número do sandbox
+      from: '+19062545363', // <- número do sandbox
     });
 
     return message.sid;
@@ -30,7 +30,7 @@ export class TwilioService {
     const message = await this.client.messages.create({
       body,
       to: `${to}`, // <- prefixo whatsapp
-      from: '+', // <- número do sandbox
+      from: '+19062545363', // <- número do sandbox
     });
 
     return message.sid;
@@ -40,7 +40,7 @@ export class TwilioService {
     const message = await this.client.messages.create({
       contentSid: process.env.contentSid,
       contentVariables: JSON.stringify(variables),
-      from: "whatsapp:+",
+      from: "whatsapp:+19062545363",
       messagingServiceSid: process.env.messagingServiceSid,
       to: `whatsapp:${to}`,
     });
